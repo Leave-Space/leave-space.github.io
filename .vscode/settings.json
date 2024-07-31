@@ -1,0 +1,8 @@
+{
+    // for "Easy LESS" plugin
+    "less.compile": {
+        "compress": false,
+        "sourceMap": false,
+        "out": "${workspaceRoot}\/resources\/css\/"
+    }
+}

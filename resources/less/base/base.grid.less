@@ -1,0 +1,50 @@
+// out: false
+
+@import "base.float.less";
+
+#grid {
+    .init() {
+        .generate-col(@type, @n, @i: 1) when (@i =< @n) {
+            &.col-@{type}-@{i} {
+                width: calc(100% / 12 * @i);
+            }
+
+            .generate-col(@type, @n, (@i + 1));
+        }
+
+        &.row {
+            box-sizing: border-box;
+            #float.init.after-clear();
+        }
+
+        &[class*="col-"] {
+            box-sizing: border-box;
+            float     : left;
+        }
+
+        // xs
+        @media (min-width: 260px) {
+            .generate-col(xs, 12, 1);
+        }
+
+        // sm
+        @media (min-width: 600px) {
+            .generate-col(sm, 12, 1);
+        }
+
+        // md
+        @media (min-width: 768px) {
+            .generate-col(md, 12, 1);
+        }
+
+        // lg
+        @media (min-width: 992px) {
+            .generate-col(lg, 12, 1);
+        }
+
+        // xl
+        @media (min-width: 1200px) {
+            .generate-col(xl, 12, 1);
+        }
+    }
+}

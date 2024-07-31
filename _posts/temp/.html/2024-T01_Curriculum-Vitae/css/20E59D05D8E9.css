@@ -1,0 +1,68 @@
+* {
+  user-select: none;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+a[target="_blank"] {
+  background-image: unset;
+  background-repeat: unset;
+  background-position: unset;
+  padding-right: unset;
+  background-size: unset;
+}
+
+.no-text-indent {
+  text-indent: unset !important;
+}
+
+.no-text-indent b {
+  font-size: 0.95em;
+}
+
+.content-panel .download-button {
+  width: 3em;
+  height: 3em;
+  top: 1.5em;
+  right: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .content-panel .download-button {
+      width: 4em;
+      height: 4em;
+      top: 2em;
+      right: 2.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  .content-panel .download-button {
+      width: 4em;
+      height: 4em;
+      top: 3.5em;
+      right: 2.5em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content-panel .download-button {
+      width: 4em;
+      height: 4em;
+      top: 4em;
+      right: 2.5em;
+  }
+}
+
+@media print {
+  h3 {
+    font-size: 0.9em;
+    margin-top: 0;
+  }
+
+  .content-panel .download-button {
+      display: block;
+  }
+}
